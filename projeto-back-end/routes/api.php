@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskControllerApi;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 });
 
-Route::get('/tasks',[TaskControllerApi::class,'index']);
-Route::get('/tasks/{Task}',[TaskControllerApi::class,'store']);
-Route::post('/tasks',[TaskControllerApi::class,'apiStore']);
-Route::put('/tasks/{Task}',[TaskControllerApi::class,'apiUpdate']);
-Route::delete('/tasks/{Task}',[TaskControllerApi::class,'apiDelete']);
+Route::resource('tasks',TaskControllerApi::class);
+
