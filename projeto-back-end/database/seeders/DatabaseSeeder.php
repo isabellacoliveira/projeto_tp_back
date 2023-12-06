@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Task;
+use App\Models\Biblioteca;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Task::create(['title'=>'Fazer lição de LP4','description'=>'nunca esquecer de ligar o xampp','completed'=>true]);
-        Task::create(['title'=>'Revisar anotações','description'=>'fazer um resumo','completed'=>false]);
-        Task::create(['title'=>'Tomar banho porque tá calor','description'=>'Pegar sabonete, se lavar','completed'=>true]);
+        Biblioteca::create(['titulo'=>'Como Eu Era Antes de Você','autor'=>'teste','sinopse'=>'De origem modesta e sem grandes aspirações, a peculiar Louisa Clark é contratada para ser cuidadora de Will, um jovem tetraplégico depressivo e cínico.', 'genero'=> 'romance']);
+        Biblioteca::create(['titulo'=>'Dom Casmurro','autor'=>'Machado de Assis','sinopse'=>'Dom Casmurro é um romance escrito por Machado de Assis, publicado em 1899 pela Livraria Garnier. Escrito para publicação em livro, o que ocorreu em 1900', 'genero'=> 'romance']);
+        Biblioteca::create(['titulo'=>'Assim que Acaba','autor'=>'Collen Hoover','sinopse'=>'Considerado o livro do ano, que virou febre no TikTok e sozinho já acumulou mais de um milhão de exemplares vendidos no Brasil.', 'genero'=> 'romance']);
     }
 }
