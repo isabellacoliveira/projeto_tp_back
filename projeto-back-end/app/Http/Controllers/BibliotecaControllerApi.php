@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Resources\Task as TaskResource;
+use App\Http\Resources\BibliotecaResource;
 use Illuminate\Http\Request;
-use App\Models\Task;
+use App\Models\Biblioteca;
 
 class BibliotecaControllerApi extends Controller
 {
